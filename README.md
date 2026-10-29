@@ -56,8 +56,6 @@ Memory: the five processed extracts hold about 4.66 million rows; 16 GB of RAM i
 | §9 Fiscal-cost groundwork | formula only; no estimate (the official MAI base price was not located) | |
 | §10 Management summary | 120–180 words | |
 
-The written W2 report (`GROUP_03_W2_Report.docx`) summarizes these results with the numbers from the executed notebook.
-
 ## Key results (2022–2024)
 - Isapre/Particular discharges have a 4.9–5.5 point lower share of high-severity cases than FONASA and a 5.5–7.0 point higher share of urgent admissions. In 2020 there is no severity gap; in 2021 it reverses.
 - Isapre/Particular discharges are 7.7–10.5 years younger, so the severity gap is not yet adjusted for age or diagnosis mix.
@@ -67,15 +65,6 @@ The written W2 report (`GROUP_03_W2_Report.docx`) summarizes these results with 
 - In the training rows, the number of patient groups equals the number of rows, so the patient grouping in GroupKFold is inactive until the identifier is diagnosed.
 - The 2024 holdout was already explored in W1 and C1; it is a robustness check, not a pristine test.
 - The comparison is not adjusted for age, diagnosis or hospital.
-
-## Submission (W2)
-```
-git add notebooks/W2_project.ipynb report/GROUP_03_W2_Report.docx README.md data/processed/*.csv data/processed/*.png
-git commit -m "W2: validation, sampling, leakage audit and chronological holdout"
-git tag w2-submission
-git push origin main --tags
-```
-Submit the repository link and the `w2-submission` tag (or commit hash). Do not add `data/processed/*.csv.gz`.
 
 ## AI-use disclosure
 Claude (Anthropic) was used to troubleshoot Python, PowerShell and encoding errors, to draft and debug code, to structure the notebook and to draft the W2 report and this README from the executed notebook's outputs. All reported values were produced by code the team executed against the real files. The team is responsible for the content and for any remaining errors.
